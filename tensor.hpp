@@ -39,9 +39,9 @@ public:
 
    std::vector<int> stride() const { return stride_; }
 
-   int size() const { return size_; }
+   size_t size() const { return size_; }
 
-   int rank() const { return rank_; }
+   size_t rank() const { return rank_; }
 
    size_t offset() const { return offset_; }
 
@@ -55,8 +55,8 @@ private:
    store data_;
    std::vector<int> dims_;
    std::vector<int> stride_;
-   int size_;
-   int rank_;
+   size_t size_;
+   size_t rank_;
    size_t offset_;
 
    Tensor( store data, size_t offset, std::vector<int> dims);
